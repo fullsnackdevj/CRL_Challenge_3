@@ -3,14 +3,15 @@
   --clr-teal-100: hsl(192, 36%, 21%);
   --clr-teal-50: hsl(184, 71%, 26%);
   --clr-teal: hsl(184, 68%, 54%);
+  --clr-white: hsl(0, 0%, 100%);
 
   /* font sizes */
 
-  --fs-48: 3rem
+  --fs-48: 3rem;
   --fs-21: 1.3125rem;
 
   /* font family */
-  --ff-roboto: 'Roboto', sans-serif;
+  --ff-roboto: "Roboto", sans-serif;
 
   /* font weight */
 
@@ -86,4 +87,48 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+/* general styles */
+
+body {
+  font-family: var(--ff-roboto);
+  color: var(--clr-white);
+}
+
+.container {
+  background-color: var(--clr-teal-100);
+  /* width: 100%; */
+  padding: 148px 122px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 40%;
+}
+
+.hero h1 {
+  font-size: var(--fs-48);
+  line-height: 56.31px;
+  text-wrap: wrap;
+}
+
+.hero p {
+  font-size: var(--fs-21);
+  font-weight: 300;
+}
+
+.hero a {
+  text-decoration: none;
+  color: var(--clr-teal-100);
+  font-size: var(--fs-21);
+  cursor: pointer;
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  border-radius: 50px;
+  background-color: var(--clr-teal);
+  font-weight: var(--fw-bold);
 }
