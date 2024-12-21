@@ -3,7 +3,8 @@
   --clr-teal-100: hsl(192, 36%, 21%);
   --clr-teal-50: hsl(184, 71%, 26%);
   --clr-teal: hsl(184, 68%, 54%);
-  --clr-white: hsl(0, 0%, 100%);
+  --clr-white: hsla(0, 0%, 100%);
+  --clr-off-white: hsla(0, 0%, 100%, 85%);
 
   /* font sizes */
 
@@ -68,19 +69,6 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 8. Improve line wrapping */
-p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-
 /*
     9. Create a root stacking context
   */
@@ -107,21 +95,25 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5rem;
-  width: 40%;
+  width: 50%;
+  max-width: 710px;
+
+  padding-right: 1rem;
 }
 
 .hero h1 {
   font-size: var(--fs-48);
   line-height: 56.31px;
-  text-wrap: wrap;
 }
 
 .hero p {
   font-size: var(--fs-21);
   font-weight: 300;
+  color: var(--clr-off-white);
 }
 
 .hero a {
+  margin-top: 2.875rem;
   text-decoration: none;
   color: var(--clr-teal-100);
   font-size: var(--fs-21);
